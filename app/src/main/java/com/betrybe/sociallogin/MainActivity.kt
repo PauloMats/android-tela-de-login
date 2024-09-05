@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.view.View
 import android.widget.Button
 import androidx.core.widget.addTextChangedListener
+import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.textfield.TextInputLayout
 
 class MainActivity : AppCompatActivity() {
@@ -44,7 +45,9 @@ class MainActivity : AppCompatActivity() {
             } else {
                 passwordText.error = null
             }
-
+            if (emailText.error == null && passwordText.error == null) {
+                Snackbar.make(main, "Login efetuado com sucesso", Snackbar.LENGTH_LONG).show()
+            }
         }
     }
 }
