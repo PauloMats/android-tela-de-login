@@ -28,5 +28,23 @@ class MainActivity : AppCompatActivity() {
             val password = passwordText.editText?.text.toString()
             loginBtn.isEnabled = email.isNotEmpty() && password.isNotEmpty()
         }
+
+        loginBtn.setOnClickListener {
+            val email = emailText.editText?.text.toString()
+            val password = passwordText.editText?.text.toString()
+            val regexValidation = "[A-Za-z0-9]+@[A-Za-z]+\\.[A-Za-z]+".toRegex()
+
+            if (!email.matches(regexValidation)) {
+                emailText.error = "Email inválido"
+            } else {
+                emailText.error = null
+            }
+            if (password.length <= 4) {
+                passwordText.error = "Senha deve ter mais de 4 caracteres"
+            } else {
+                passwordText.error = null
+            }
+
+        }
     }
 }
