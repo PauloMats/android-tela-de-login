@@ -23,6 +23,5 @@ Este projeto foi desenvolvido como parte do curso da Trybe, com o objetivo de cr
 - Construção de **layouts via XML**.
 - Posicionamento e estruturação de elementos com **ViewGroup**.
 
-## 🚀 Como Executar o Projeto
 
 
